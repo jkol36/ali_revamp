@@ -40,10 +40,10 @@
 	<div class="top-bar">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-7">
+				{% comment %}<div class="col-sm-7">
 					<ul class="nav nav-pills">
 						<li class="dropdown">
-							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><img src="img/icons/en.gif" alt="en"> English <b class="caret"></b></a>
+							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><img src="img/en.png" alt="en"> English <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="index.html#"><img src="{% static 'img/icons/fr.gif' %}" alt="fr"> French</a></li>
 								<li><a href="index.html#"><img src="{% static 'img/icons/it.gif' %}" alt="it"> Italian</a></li>
@@ -52,10 +52,10 @@
 							</ul>
 						</li>
 					</ul>
-				</div>
+				</div>{% endcomment %}
 				<div class="col-sm-5 text-right">
 					<p class="left"><i class="fa fa-calendar-o"></i> Monday to Saturday - 8am to 9pm</p>
-					<p class="right"><i class="glyphicon glyphicon-phone"></i> Contact : +1-800-654-3210</p>
+					<p class="right"><i class="glyphicon glyphicon-phone"></i> Contact : 1-800-CLE-NEWS</p>
 				</div>
 			</div><!-- /.row -->
 		</div><!-- /.top-bar -->
@@ -73,25 +73,26 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand logo-nav" href="index.html"><img src="{% static 'img/logo.png' %}" alt="//"></a>
+					<a class="navbar-brand logo-nav" href="index.html"><img src="{% static 'img/ALICLE_Logo.png' %}" alt="//"></a>
 				</div><!-- /.nav-header -->
 
 				<div class="collapse navbar-collapse navbar-collapse navbar-right">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about-us.html">Our Firm</a></li>
-						<li><a href="attorneys.html">Attorneys</a></li>
 						<li class="dropdown">
-							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">News <span class="caret"></span></a>
+							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">CLE<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="news.html">News</a></li>
-                                <li><a href="news-2.html">News 2</a></li>
-								<li><a href="publications.html">Publications</a></li>
-								<li><a href="news-single-post.html">Single News</a></li>
+								<li><a href="news.html">On-Demand</a></li>
+                                <li><a href="news-2.html">Live Courses</a></li>
+								<li><a href="publications.html">Webcast</a></li>
+								<li><a href="publications.html">Publications/Coursebooks</a></li>
+								<li><a href="news-single-post.html">Telephone/Audio</a></li>
 							</ul>
 						</li>
+						<li><a href="attorneys.html">About</a></li>
+						{% comment %}
 						<li class="dropdown">
-							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">Areas<span class="caret"></span></a>
+							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">V<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="practice-areas.html">Corporate / Finance</a></li>
 								<li><a href="practice-areas.html">Dispute Resolution</a></li>
@@ -104,26 +105,19 @@
 								<li><a href="practice-areas.html">Natural Resources</a></li>
 								<li><a href="practice-areas.html">FS and TA</a></li>
 							</ul>
-						</li>
-						<li><a href="clients.html">Clients</a></li>
+						</li>{% endcomment %}
+						<li><a href="clients.html">View Content</a></li>
 						<li class="dropdown">
-							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">Pages<span class="caret"></span></a>
+							<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">Login<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="team.html">Our Team</a></li>
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="shop-grid.html">Shop Grid</a></li>
-								<li><a href="shop-list.html">Shop List</a></li>
-								<li><a href="shop-single.html">Shop Single</a></li>
-								<li><a href="shop-cart.html">Shop Cart</a></li>
-								<li><a href="appointment.html">Appointment</a></li>
-								<li><a href="timetable.html">Timetable</a></li>
-								<li><a href="typography.html">Typography</a></li>
-								<li><a href="shortcodes.html">Shortcodes</a></li>
-								<li><a href="error-404.html">Error 404</a></li>
-								<li><a href="contact-map-right.html">Contact Map Right</a></li>
+								<li><a href="team.html">LAWPASS SOLO</a></li>
+								<li><a href="gallery.html">LAWPASS FIRM</a></li>
+								<li><a href="shop-grid.html">LOGIN</a></li>
+								<li><a href="shop-list.html">CREATE ACCOUNT</a></li>
+								<li><a href="shop-single.html">RETRIEVE ACCOUNT</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.html">View Cart <img src="{% static 'img/cart.jpg' %}" /></a></li>
 
 					</ul>
 				</div>
@@ -140,7 +134,7 @@
 					<!-- Slider 1 -->
 					<li data-transition="zoomout" data-slotamount="5" data-masterspeed="1200" data-saveperformance="off"  data-title="Intro Slide">
 						<!-- MAIN IMAGE -->
-						<img src="{% static 'img/rev-slider/dummy.pn' %}g"  alt="slidebg1" data-lazyload="{% static 'img/rev-slider/background1.jpg' %}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<img src="{% static 'img/rev-slider/CW004_banner.jpg' %}g"  alt="slidebg1" data-lazyload="{% static 'img/rev-slider/CW004_banner.jpg' %}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 						<!-- LAYERS -->
 
 						<!-- LAYER NR. 1 -->
@@ -182,7 +176,7 @@
 					<!-- Slider 2 -->
 					<li data-transition="zoomout" data-slotamount="5" data-masterspeed="1200" data-saveperformance="off"  data-title="Intro Slide">
 						<!-- MAIN IMAGE -->
-						<img src="{% static 'img/rev-slider/dummy.png' %}"  alt="slidebg1" data-lazyload="{% static 'img/rev-slider/background2.jpg' %}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<img src="{% static 'img/rev-slider/programs.jpg' %}"  alt="slidebg1" data-lazyload="{% static 'img/rev-slider/programs.jpg' %}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 						<!-- LAYERS -->
 
 						<!-- LAYER NR. 1 -->
@@ -224,7 +218,7 @@
 					<!-- Slider 3 -->
 					<li data-transition="zoomout" data-slotamount="5" data-masterspeed="1200" data-saveperformance="off"  data-title="Intro Slide">
 						<!-- MAIN IMAGE -->
-						<img src="{% static 'img/rev-slider/dummy.png' %}"  alt="slidebg1" data-lazyload="{% static 'img/rev-slider/background3.jpg' %}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<img src="{% static 'img/rev-slider/CW008_banner.jpg' %}"  alt="slidebg1" data-lazyload="{% static 'img/rev-slider/CW008_banner.jpg' %}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 						<!-- LAYERS -->
 
 						<!-- LAYER NR. 1 -->
@@ -277,20 +271,20 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="boxes-item">
-						<h5><i class="fa fa-bank"></i> Business Legal</h5>
-						<p>Throughout the years, our firm has evolved. New partners. New logo. New website.</p>
+						<h5><i class="fa fa-bank"></i> Quality </h5>
+						<p>Try the ALI-CLE Advantage!</p>
 					</div>
 				</div>
 				<div class="col-md-4 active">
 					<div class="boxes-item">
-						<h5><i class="fa fa-hourglass"></i> Opening Hours</h5>
-						<p>We will help you build strong online business by creating a professional website.</p>
+						<h5><i class="fa fa-hourglass"></i>Carefully Curated Material</h5>
+						<p>Helps Keep Clients engaged and genuiniely interseted.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="boxes-item">
-						<h5><i class="fa fa-users"></i> Personal Atention</h5>
-						<p>Custom admin panel significantly extends original Wordpress functionality.</p>
+						<h5><i class="fa fa-users"></i> Fun!</h5>
+						<p>Lawyers will have so much fun they can't wait for cle credit-deadline season to come around again!</p>
 					</div>
 				</div>
 			</div>
@@ -312,22 +306,22 @@
 				<div class="col-sm-4">
 					<a href="index.html#" class="icon-box">
 						<span class="icon"><i class="fa fa-balance-scale"></i></span>
-						<h4>Criminal</h4>
-						<p>Lawyer Attorneys has more than 20 years of experiences in this feild and we have solved more than 2000 cases. Every case is very important to us and we always take care of them seriously.</p>
-					</a>
-				</div>
-				<div class="col-sm-4">
-					<a href="index.html#" class="icon-box">
-						<span class="icon"><i class="fa fa-gavel"></i></span>
-						<h4>Personal Injury</h4>
-						<p>Lawyer Attorneys has more than 20 years of experiences in this feild and we have solved more than 2000 cases. Every case is very important to us and we always take care of them seriously.</p>
+						<h4>ON DEMAND / WEBCAST</h4>
+						<p>ALI CLE's Online CLE courses combine streaming video or audio, printable materials, and user discussion areas, accessible 24 hours a day, 7 days a week.</p>
 					</a>
 				</div>
 				<div class="col-sm-4">
 					<a href="index.html#" class="icon-box">
 						<span class="icon"><i class="fa fa-car"></i></span>
-						<h4>Auto Accidents</h4>
-						<p>Lawyer Attorneys has more than 20 years of experiences in this feild and we have solved more than 2000 cases. Every case is very important to us and we always take care of them seriously.</p>
+						<h4>LIVE COURSES</h4>
+						<p>Like On Demand - just with Temporal Presence Required</p>
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="index.html#" class="icon-box">
+						<span class="icon"><i class="fa fa-gavel"></i></span>
+						<h4>COURSEWARE</h4>
+						<p>Expertly Crafted by our CourseWare artisans in Italy.</p>
 					</a>
 				</div>
 			</div>
@@ -347,28 +341,56 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-3">
-					<h6>Business Services</h6>
 					<ul class="list-group list-group-line list-group-arrow">
-						<li class="fa fa-angle-double-right"><a href="index.html#">AML Compliance</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Arbitration</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Bank Lending</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Structured Finance</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Securitisation</a></li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Antitrust</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Banking </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Bankruptcy </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Business/Corporate Law</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Commercial Law/UCC </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Criminal Law </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Elder Law</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Elimination of Bias</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Employee Benefits</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Employment/Labor Law</li>
+					</ul>
+					</div>
+				<div class="col-sm-3">
+					<ul class="list-group list-group-line list-group-arrow">
+					<li class="fa fa-angle-double-right"><a href="index.html#">Energy</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Environmental Law</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Estate Planningv</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Ethics</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Family Law </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Financial Crisis</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">General Practice </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Government Affairs</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Health Law </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Healthcare Reform</li>
 					</ul>
 				</div>
-				<div class="col-md-6 animate" data-animate="fadeIn">
-					<figure class="img-doctors">
-						<img src="{% static 'img/services.png' %}" alt="//" />
-					</figure>
-				</div>
 				<div class="col-sm-3">
-					<h6>Personal Services</h6>
 					<ul class="list-group list-group-line list-group-arrow">
-						<li class="fa fa-angle-double-right"><a href="index.html#">Adoption</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Agreements</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Divorce</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Domestic Torts</a></li>
-						<li class="fa fa-angle-double-right"><a href="index.html#">Domestic Violence</a></li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Immigration</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Insurance</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Intellectual Property </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">International Practice </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Land Use</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Law Practice </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Lawyering Skills </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Litigation </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Nonprofit Organizations </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Privacy</li>
+					</ul>
+					
+					</div>
+					<div class="col-sm-3">
+					<ul class="list-group list-group-line list-group-arrow">
+					<li class="fa fa-angle-double-right"><a href="index.html#">Real Estate </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Science & Technology </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Securities</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Substance Abuse</li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Taxation </li>
+					<li class="fa fa-angle-double-right"><a href="index.html#">Torts </li>					
 					</ul>
 				</div>
 			</div>
@@ -389,7 +411,7 @@
 			<div class="row">
 				<div class="col-sm-6 hidden-xs">
 					<figure class="img-faq">
-						<img src="{% static 'img/img-view.png' %}" alt="//" />
+						<img src="{% static 'img/LargeBanners_v4.png' %}"  style="width:550px;height:408px;" />
 					</figure>
 				</div>
 				<div class="col-sm-6">
@@ -398,13 +420,13 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion" href="index.html#collapseOne">
-										<i class="fa fa-angle-down"></i>Were you involved in car accident?
+										<i class="fa fa-angle-down"></i>What is the ALI-CLE Advantage?
 									</a>
 								</h4>
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<p>If you are a victim of crime, you need the help of a professional lawyer who is responsive and compassionate.  While you cannot stop crime from happening, you can help others as your lawsuits against the responsible perpetrator will help them to improve their security and ensure that such crimes do not happen in the future.</p>
+									<p>ALI CLE is a leading provider of continuing legal education online and offline.  The ALI CLE volunteer CLE speakers and writers have consisted of thousands of the most prominent lawyers, legal academics and judges in the United States.</p>
 								</div>
 							</div>
 						</div>
@@ -412,13 +434,13 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion" href="index.html#collapseTwo">
-										<i class="fa fa-angle-down"></i>What services are available for crime victims
+										<i class="fa fa-angle-down"></i>What Products and Services are Offered by ALI-CLE
 									</a>
 								</h4>
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse">
 								<div class="panel-body">
-									<p>It is important that you hire a lawyer too as all companies, irrespective of their size needs legal representation. When you start your business, you will find that you need legal guidance at every step and at different phases of the business life, from the initial incorporation to raising capital for expansion to hiring employees, you need the services of a good lawyer. It goes without saying that most businessmen cannot handle the legal matters in a way that professional and competent lawyers can.</p>
+									<p>ALI-CLE Offers a Variety of Quality Products to help you Satisfy your CLE Requirement. We offer CLE through participation in live events, online courses, mp3 downloads, CLE books, and publications.</p>
 								</div>
 							</div>
 						</div>
@@ -426,30 +448,31 @@
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordion" href="index.html#collapseThree">
-										<i class="fa fa-angle-down"></i>Every attorney should give free consultation
+										<i class="fa fa-angle-down"></i>Wait didn't your site used to run on ColdFusion?
 									</a>
 								</h4>
 							</div>
 							<div id="collapseThree" class="panel-collapse collapse">
 								<div class="panel-body">
-									<p>While you cannot stop crime from happening, you can help others as your lawsuits against the responsible perpetrator will help them to improve their security and ensure that such crimes do not happen in the future. We can also help you with lawsuits against negligent parties for different issues such as inadequate security, wrong hiring practices and also lawsuits against schools.</p>
+									<p>While we have tried to love ColdFusion, it has in turn left us .... cold ... and unable to move foreward into the future. We use Django now. <font color = "white"> "ColdFusion Rocks" - Jon Kolmon, ALI CLE, Lead ColdFusion Infrastrastructure Evangilst </font></p>
 								</div>
 							</div>
 						</div>
 						<div class="panel">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="index.html#collapseOther">
-										<i class="fa fa-angle-down"></i>How can your startup hire a quality lawyer
+									<a data-toggle="collapse" data-parent="#accordion" href="index.html#collapseFour">
+										<i class="fa fa-angle-down"></i>Does ALI-CLE offer any Unique deals or Subscriptions Plans.
 									</a>
 								</h4>
 							</div>
-							<div id="collapseOther" class="panel-collapse collapse">
+							<div id="collapseFour" class="panel-collapse collapse">
 								<div class="panel-body">
-									<p>Starting a new venture can be exciting and challenging. It is important that you hire a lawyer too as all companies, irrespective of their size needs legal representation. When you start your business, you will find that you need legal guidance at every step and at different phases of the business life, from the initial incorporation to raising capital for expansion to hiring employees, you need the services of a good lawyer. It goes without saying that most businessmen cannot handle the legal matters in a way that professional and competent lawyers can.</p>
+									<p>Yes in addition to weekly deals, we offer the wildly popular LawPass Solo and LawPass Firm product </p>
 								</div>
 							</div>
 						</div>
+						 {% comment %}
 						<div class="panel">
 							<div class="panel-heading">
 								<h3 class="panel-title">
@@ -463,7 +486,7 @@
 									<p>If you need legal advice for your business or personal matters, hiring quality and professional lawyers may cost you lot of money. But, it is always advisable to opt for quality legal services. here are some tips that will help you to avoid high cost of legal advice. If you belong to the low-income group, you …</p>
 								</div>
 							</div>
-						</div>
+						</div>{% endcomment %} 
 					</div>
 				</div>
 			</div>
@@ -477,15 +500,15 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="section-title">
-						<h3>Appointment Form</h3>
+						<h3>Questions?</h3>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-9">
 					<div class="ct-form clearfix">
-						<h6>Complete the form</h6>
-						<p>Pellentesque consequat consequat eros non tincidunt pellentesque vitae tempor massa morbi volutpat lorem non mattis morbi felis mauris, eu congue arcu molestie malesua </p>
+						<h6>Need Help, Want More Information? Contact Us</h6>
+						<p>Your Request Will Be Processed by a ALI-CLE Representative as soon as possible.</p>
 						<form id="request" action="request-form.php" method="post" accept-charset="utf-8">
 							<div class="row">
 								<div class="col-sm-12">
@@ -533,18 +556,18 @@
 						</form>
 					</div>
 				</div>
-				<div class="col-sm-7 hidden-xs">
+				{% comment %}<div class="col-sm-7 hidden-xs">
 					<figure class="animated fadeInUpBig" data-animation="fadeInUpBig" data-animation-delay="400">
 						<img src="{% static 'img/person.png' %}" alt="//">
 					</figure>
-				</div>
+				</div>{% endcomment %}
 			</div>
 		</div>
 	</section>
 	<!-- End Appointment -->
 
 	<!-- Testimonials -->
-
+{% comment %}
 	<section class="generic" >
     	<div class="container">
     		<div class="row">
@@ -754,6 +777,7 @@
 			</div>
     	</div>
     </section>
+	{% endcomment %}
 	<!-- End testimonials -->
 
 	<!-- Recent News -->
@@ -762,7 +786,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="section-title">
-						<h3>Recent News</h3>
+						<h3>Upcoming Events</h3>
 					</div>
 				</div>
 			</div>
@@ -770,17 +794,17 @@
 				<div class="col-sm-6 col-md-4">
 					<a href="index.html#" class="featured-item ct-icon">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/features/featured-1.jpg" alt="//">' %}
+							<img class="img-responsive" src="{% static 'img/features/Virginia-Banner.jpg" alt="//">' %}
 							<div class="icon-image"><span class="fa fa-newspaper-o" aria-hidden = "true"></span></div>
 						</figure>
 						<div class="content text-center">
-							<h4>New Regulation (EU)2</h4>
-							<p>International Successions - New Regulation (EU) No 650/2012. Tamet, consectetur adipisicing elin molestiae ex...</p>
+							<h4>IP LAW</h4>
+							<p>Intellectual Property Ethics Course.</p>
 						</div>
 						<div class="foot">
 							<ul>
 								<li>
-									<span class="fa fa-user"></span>By Mike Joe
+									<span class="fa fa-user"></span>Richmond, VA
 								</li>
 								<li class="right">
 									<span class="fa fa-calendar-o"></span>12 April 2015
@@ -792,17 +816,17 @@
 				<div class="col-sm-6 col-md-4">
 					<a href="index.html#" class="featured-item ct-icon">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/features/featured-2.jpg" alt="//">' %}
+							<img class="img-responsive" src="{% static 'img/features/PA-Banner.jpg" alt="//">' %}
 							<div class="icon-image"><span class="fa fa-newspaper-o"></span></div>
 						</figure>
 						<div class="content text-center">
 							<h4>Real Estate practice</h4>
-							<p>BSP boosts its Real Estate practice by welcoming aorem ipsum dolor sit amtetur adipisicing elmolestia olestiae ex...</p>
+							<p>Real Estate Practice Ethics Course.</p>
 						</div>
 						<div class="foot">
 							<ul>
 								<li>
-									<span class="fa fa-user"></span>By Mike Joe
+									<span class="fa fa-user"></span>Philadelphia, Pa
 								</li>
 								<li class="right">
 									<span class="fa fa-calendar-o"></span>12 April 2015
@@ -814,17 +838,17 @@
 				<div class="col-sm-6 col-md-4">
 					<a href="index.html#" class="featured-item ct-icon">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/features/featured-3.jpg" alt="//">' %}
+							<img class="img-responsive" src="{% static 'img/features/California-Banner.jpg" alt="//">' %}
 							<div class="icon-image"><span class="fa fa-newspaper-o"></span></div>
 						</figure>
 						<div class="content text-center">
-							<h4>Anti-Money Laundering</h4>
-							<p>Fight against money laundering and terrorism financing, this conference will highlight the main aspects ectetur in...</p>
+							<h4>Anti-Money Laundering </h4>
+							<p>Anti-Money laundering Course.</p>
 						</div>
 						<div class="foot">
 							<ul>
 								<li>
-									<span class="fa fa-user"></span>By Mike Joe
+									<span class="fa fa-user"></span>San Fransisco, CA
 								</li>
 								<li class="right">
 									<span class="fa fa-calendar-o"></span>12 June 2016
@@ -865,12 +889,11 @@
 				<div class="row">
 					<div class="widget col-sm-6 col-md-3">
 						<h5 class="widget-title">Contact Info</h5>
-						<p>Lawyers Attorneys is the official studio of the United States Tennis Association.</p>
+						<p>The American Law Institute</p>
 						<address class="address-list">
-							<i class="fa fa-building-o"></i> PT, East 39th Street, New York, NY <br>
-							<i class="fa fa-whatsapp"></i> +5559 9654982 84 <br>
-							<i class="fa fa-envelope"></i> contact@demo.com <br>
-							<i class="fa fa-desktop"></i> www.researchcenter.com
+							<i class="fa fa-building-o"></i>4025 Chestnut Street Philadelphia, PA 19104-3099 <br>
+							<i class="fa fa-whatsapp"></i> 1-800-CLE-NEWS<br>
+							<i class="fa fa-envelope"></i> TeamMCLE@ali-cle.org <br>
 						</address>
 					</div>
 					<div class="widget col-sm-6 col-md-3">
@@ -878,20 +901,20 @@
 						<ul class="media-list">
 							<li class="media">
 								<a class="pull-left" href="index.html#">
-									<img class="media-object" src="{% static 'img/news/news-thumbnail-144x144-01.jpg' %}" alt="//">
+									<img class="media-object" src="{% static 'img/news/ALI-CLE-logo-21.png' %}" alt="//">
 								</a>
 								<div class="media-body">
-									<h5 class="media-heading"><a href="index.html#">Enjoy your new dazzling cool and fresh smile!</a></h5>
-									<p class="media-meta">Post 15 April 2013</p>
+									<h5 class="media-heading"><a href="index.html#">ALI-CLE	News Heading One.</a></h5>
+									<p class="media-meta">Posted November 11 2015</p>
 								</div>
 							</li>
 							<li class="media">
 								<a class="pull-left" href="index.html#">
-									<img class="media-object" src="{% static 'img/news/news-thumbnail-144x144-02.jpg' %}" alt="//">
+									<img class="media-object" src="{% static 'img/news/ALI-CLE-logo-21.png' %}" alt="//">
 								</a>
 								<div class="media-body">
-									<h5 class="media-heading"><a href="blog-left-sidebar.html">Enjoy your new dazzling cool and fresh smile!</a></h5>
-									<p class="media-meta">Post 12 April 2013</p>
+									<h5 class="media-heading"><a href="blog-left-sidebar.html">ALI-CLE	News Heading Two.</a></h5>
+									<p class="media-meta">Posted November 12 2015</p>
 								</div>
 							</li>
 						</ul>
@@ -908,24 +931,22 @@
 							</ul>
 						</div>
 					</div>
-					<div class="widget col-sm-6 col-md-3">
-						<h5 class="widget-title">Our Image Gallery</h5>
-						<ul class="min-gallery list-unstyled list-inline">
-							<li><a href="index.html#"><img src="{% static 'img/news/news-thumbnail-144x144-02.jpg' %}" alt="//"></a></li>
-							<li><a href="index.html#"><img src="{% static 'img/news/news-thumbnail-144x144-03.jpg' %}" alt="//"></a></li>
-							<li><a href="index.html#"><img src="{% static 'img/news/news-thumbnail-144x144-04.jpg' %}" alt="//"></a></li>
-							<li><a href="index.html#"><img src="{% static 'img/news/news-thumbnail-144x144-05.jpg' %}" alt="//"></a></li>
-							<li><a href="index.html#"><img src="{% static 'img/news/news-thumbnail-144x144-01.jpg' %}" alt="//"></a></li>
-							<li><a href="index.html#"><img src="{% static 'img/news/news-thumbnail-144x144-02.jpg' %}" alt="//"></a></li>
+					{% comment %} <div class="widget col-sm-6 col-md-3">
+						<h5 class="widget-title">E-Mail Directory</h5>
+						<ul class="list-group list-arrow">
+							<li class="media-heading fa fa-angle-right">Julie Scribner,<br/> CFO and Director of ALI CLE<br/>(215) 243-1672</a></li>
+							<li class="media-heading fa fa-angle-right">Nancy Mulloy-Bonn,<br/>Chief CLE Content Officer<br/>(215) 243-1625</a></li>
+							<li class="media-heading fa fa-angle-right">Diane Schnitzer,<br/>Director of Human Resources<br/>(215) 243-4000</a></li>
+							<li class="media-heading fa fa-angle-right">Nancy Cline,<br/>Customer Service/MCLE Director<br/>(215) 243-4007</a></li>
 						</ul>
-					</div>
+					</div>{% endcomment %}
 				</div>
 			</div>
 		</div>
 		<div class="copy">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6"><p class="down">Lawyers Attorneys Legal Office Responsive Theme.<p></div>
+					{% comment %} <div class="col-sm-6"><p class="down">Lawyers Attorneys Legal Office Responsive Theme.<p></div>{% endcomment %} 
 					<div class="col-sm-6">
 						<ul class="social-links">
 							<li>
