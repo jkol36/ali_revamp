@@ -104,143 +104,94 @@
 
 	
 
-	
+<div class="col-md-12 offset-col-md-4">
 
+	<div style="margin-top:5%;">
 
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#onlineCourses" aria-controls="onlineCourses" role="tab" data-toggle="tab">Online Courses</a></li>
+		    <li role="presentation"><a href="#mp3AudioFiles" aria-controls="mp3AudioFiles" role="tab" data-toggle="tab">MP3 Audio Files</a></li>
+		    <li role="presentation"><a href="#liveWebcasts" aria-controls="liveWebcasts" role="tab" data-toggle="tab">Live Webcasts</a></li>
+		    <li role="presentation"><a href="#onlineCLEBundles" aria-controls="onlineCLEBundles" role="tab" data-toggle="tab">Online CEL Bundles</a>
+		    </li>
+		    <li role="presentation"><a href="#inPersonCourses" aria-controls="inPersonCourses" role="tab" data-toggle="tab">In-Person Courses</a>
+		    </li>
+		  </ul>
+		  <!-- end of nav tabs -->
+
+			<div class="tab-content">
+				
+		  	<div role="tabpanel" class="tab-pane active" id="onlineCourses">
+		  		<div class="row">
+				  	<div class="col-md-12">
+				  		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  			<div class="panel panel-default">
+				  				<div class="panel-heading" role="tab" id="headingOne">
+				  					<!-- panel title -->
+				  					<h4 class="panel-title">
+				  							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				  								Browse courses by practice area
+				  							</a>
+				  					</h4>
+				  					<!-- end of panel title -->
+
+				  					
+				  				</div>
+				  				<!-- end of panel heading -->
+				  				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+				  					<!-- start of panel body -->
+				  					<div class="panel-body">
+				  						{% for practice_area in practice_areas %}
+				  							<li> <a> {{practice_area}} </a> </li>
+				  						{%endfor%}
+				  					</div>
+				  				</div>
+
+				  				<div class="panel-panel-default">
+				  				<!-- panel heading --> 
+				  					<div class="panel-heading" role="tab" id="headingTwo">
+				  						<!-- panel title -->
+				  						<h4 class="panel-title">
+				  							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+				  								Browse courses by State
+				  							</a>
+				  						</h4>
+				  						<!-- end of panel title --> 
+				  					</div>
+				  					<!-- end of panel heading --> 
+										<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-lablledby="headingTwo">
+												<!-- panel body -->
+					  					<div class="panel-body">
+					  						{% for state in states %}
+					  							<li> <a> {{state}} </a> </li>
+					  						{%endfor%}
+					  					</div>
+					  					<!-- end of panel body --> 
+										</div>
+				  					
+				  				</div>
+				  			</div>
+				  		</div>
+				  	</div>
+				  </div>
+			  </div>
+		    <div role="tabpanel" class="tab-pane" id="mp3AudioFiles">...</div>
+		    <div role="tabpanel" class="tab-pane" id="liveWebcasts">...</div>
+		    <div role="tabpanel" class="tab-pane" id="onlineCLEBundles">...</div>
+		    <div role="tabpanel" class="tab-pane" id="inPersonCourses">...</div>
+		  </div>
+		 </div>
+
+	</div>
+</div>
 
 	<!-- Services List -->
-	<section class="bg-light services" style="margin-top:5%; margin-bottom:5%;">
-		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title text-center">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Browse Online CLE courses by practice area
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <div class="row">
-     			
-					<div class="col-sm-3">
-					{% for practice_area in practice_areas %}
-						<ul class="list-group list-group-line list-group-arrow">
-						<li class="fa fa-angle-double-right"><a href="index.html#">{{practice_area}}</li>
-						
-						</ul>
-					{%endfor%}
-					</div>
-					
-					
-      </div>
-    </div>
-  </div>
-			
-		</section>
 
-	<section class="bg-light services" style=" margin-bottom:5%;">
-		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title text-center">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          Browse Online CLE courses by state
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="row">
-        	<div class="col-sm-3">
-					{% for state in states %}
-						<ul class="list-group list-group-line list-group-arrow">
-						<li class="fa fa-angle-double-right"><a href="index.html#">{{state }}</li>
-						
-						</ul>
-					{%endfor %}
-					</div>
-        </div>
-      </div>
-    </div>
-  </div>
-			
-		</section>
-		
 
 	
 
-	<!-- Appointment -->
-	<section class="generic appointment bg-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="section-title">
-						<h3>Questions?</h3>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-9">
-					<div class="ct-form clearfix">
-						<h6>Need Help, Want More Information? Contact Us</h6>
-						<p>Your Request Will Be Processed by a ALI-CLE Representative as soon as possible.</p>
-						<form id="request" action="request-form.php" method="post" accept-charset="utf-8">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="name" class="sr-only">Name</label>
-										<i class="fa fa-user"><input type="text" class="form-control" placeholder="Name and Lastname" name="name" id="name"/></i>
-									</div>
-									<div class="form-group">
-										<label for="phone" class="sr-only">Phone number</label>
-										<i class="glyphicon glyphicon-erase"><input type="text" class="form-control" placeholder="Contact number" name="phone" id="phone"/></i>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<i class="fa fa-calendar-o"><input type="text" name="datepicker" id="datepicker" placeholder="Date From" class="form-control"></i>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<i class="fa fa-calendar-o"><input type="text" name="datepicker" id="datepicker2" placeholder="Date To" class="form-control"></i>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="message" class="sr-only">Message</label>
-										<i class="glyphicon glyphicon-pencil"><textarea class="form-control message" id="message" placeholder="Message"></textarea></i>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="input-group appointment">
-										<span class="input-group-addon">
-											<input type="checkbox" aria-label="...">
-										</span>
-										<p>Send me a copy of this information</p>
-									</div>
-								</div>
-							</div>
-							<input type="submit" class="btn btn-default btn-color-border-solid" value="Send Message">
-						</form>
-					</div>
-				</div>
-				{% comment %}<div class="col-sm-7 hidden-xs">
-					<figure class="animated fadeInUpBig" data-animation="fadeInUpBig" data-animation-delay="400">
-						<img src="{% static 'img/person.png' %}" alt="//">
-					</figure>
-				</div>{% endcomment %}
-			</div>
-		</div>
-	</section>
-	<!-- End Appointment -->
+	
 
 	<!-- Testimonials -->
 {% comment %}
@@ -663,7 +614,9 @@
 	<script src="{% static 'js/vendors/jquery/jquery-1.11.3.min.js' %}" ></script>
 
     <!-- Bootstrap-->
-	<script src="{% static 'js/vendors/bootstrap.min.js' %}" ></script>
+	<script src="{% static 'js/vendors/bootstrap.min.js' %}"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/umd/tab.js"></script>
 
 	<!-- Nav -->
 	<script src="{% static 'js/vendors/jquery/jquery.nav.js' %}" ></script>
